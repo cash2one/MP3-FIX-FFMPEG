@@ -1,17 +1,17 @@
 @ECHO OFF
 
-SET audioPathFS=%~1
-SET filenameFS=%~nx1
+SET audioPathFS="%~1"
+SET filenameFS="%~nx1"
 SET audioPath=%audioPathFS:mp3_FS.=%
 SET filename=%filenameFS:mp3_FS.=%
 
 ECHO Delete
-DEL "%audioPath%"
+DEL %audioPath%
 
 ECHO --
 
 Echo Rename
-REN "%audioPathFS%" "%filename%"
+REN %audioPathFS% %filename%
 
 
 ECHO --
@@ -22,4 +22,3 @@ ECHO %audioPath%
 ECHO %audioPathFS%
 
 ECHO ---------------------------------------------
-
